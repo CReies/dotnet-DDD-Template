@@ -12,7 +12,7 @@ public class AggregateBehavior : Behavior
 
 	private void AddExampleCreatedSub( Aggregate aggregate )
 	{
-		AddSub( ( ExampleCreated domainEvent ) =>
+		AddSub( ( AggregateCreated domainEvent ) =>
 		{
 			aggregate.ExampleVO = ExampleVO.Of( domainEvent.Value );
 		} );
