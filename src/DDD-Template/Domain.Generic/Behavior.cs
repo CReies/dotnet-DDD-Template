@@ -1,6 +1,6 @@
 ﻿namespace Domain.Generic;
 
-public abstract class EventChange
+public abstract class Behavior
 {
 	public HashSet<Action<DomainEvent>> Subscribers { get; private set; } = [];
 
