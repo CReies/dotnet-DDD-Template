@@ -14,7 +14,7 @@ public class AggregateRoot<I>( I identity ) : Entity<I>( identity ) where I : Id
 		_changeEventSubscriber.Events.Clear();
 	}
 
-	protected void Subscribe( EventChange eventChange )
+	protected void Subscribe( Behavior eventChange )
 	{
 		_changeEventSubscriber.Subscribe( eventChange );
 	}

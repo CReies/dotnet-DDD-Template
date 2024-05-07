@@ -6,7 +6,7 @@ public class ChangeEventSubscriber
 	private readonly HashSet<Action<DomainEvent>> _subscribers = [];
 	private readonly Dictionary<string, int> _versions = [];
 
-	public void Subscribe( EventChange eventChange )
+	public void Subscribe( Behavior eventChange )
 	{
 		_subscribers.UnionWith( eventChange.Subscribers );
 	}
