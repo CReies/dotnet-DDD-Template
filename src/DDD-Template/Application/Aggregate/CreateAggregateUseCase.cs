@@ -12,7 +12,7 @@ public class CreateAggregateUseCase( IEventsRepository repository ) : IInitialCo
 		var aggregate = new Domain.Model.Aggregate.Aggregate( command.Value );
 		var domainEvents = aggregate.GetUncommittedChanges();
 
-		domainEvents.ForEach( ( DomainEvent domainEvent ) => { _repository.Save( domainEvent )} );
+		domainEvents.ForEach( ( DomainEvent domainEvent ) => { _repository.Save( domainEvent ); } );
 		aggregate.MarkAsCommitted();
 		return domainEvents;
 	}
